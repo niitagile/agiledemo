@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+ <context:annotation-config/>
+ <bean id="CountryBean" class="com.Annotations.AutoWire.Country">
+  <property name="countryName" value="India" />
+ <!-- <property name="capital" ref="CB" /> -->
+ </bean>
+ <bean id="CB" class="com.Annotations.AutoWire.Capital">
+  <property name="capitalName" value="Delhi" />
+ </bean>
+ <!-- 
+ <bean id="CB1" class="com.Annotations.AutoWire.Capital">
+  <property name="capitalName" value="Mumbai" />
+ </bean>
+ 
+  -->
+</beans>
